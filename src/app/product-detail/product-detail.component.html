@@ -1,0 +1,31 @@
+<div id="big">
+<div *ngIf="product" id="one">
+
+  <h2>{{product.name | uppercase}}</h2>
+  <div><span>price: </span>{{product.price}}</div>
+  <div><span>description: </span>{{product.description}}</div>
+  <div><img src = "{{product.image}}"></div>
+  <div><span>rating: </span>{{product.rating}}</div>
+
+</div>
+
+<div id="two">
+
+  <h2>Would you like to order?</h2>
+  <label for="quantity">Quantity</label><br>
+  <input type="text" id="quantity" name="quantity"><br>
+
+  <label for="weight">Weight</label><br>
+  <input type="text" id="weight" name="weight"><br>
+
+  <label for="date_1">Date of sending</label><br>
+  <input type="text" id="date_1" name="date_1"><br>
+
+  <label for="date_2">Date of recieving</label><br>
+  <input type="text" id="date_2" name="date_2"><br>
+
+  <button routerLink="/detail/{{product.id}}/status">Order</button>
+</div>
+</div>
+
+<!--<button (click)="goBack()">go back</button>-->
